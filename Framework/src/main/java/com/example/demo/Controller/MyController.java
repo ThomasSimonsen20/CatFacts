@@ -55,11 +55,11 @@ public class MyController {
     @ResponseBody
     public String contains(@RequestParam char charcater, int amount) throws IOException {
         CatService catService = new CatService();
-        CatFact a = catService.getCatFact();
-        int occurrence = StringUtils.countOccurrencesOf(a.getText(), String.valueOf(charcater));
+        CatFact catFact = catService.getCatFact();
+        int occurrence = StringUtils.countOccurrencesOf(catFact.getText(), String.valueOf(charcater));
 
         if (occurrence >= amount) {
-            return a.getText();
+            return catFact.getText();
         } else {
             return "Sorry no luck";
         }
