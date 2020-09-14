@@ -56,9 +56,9 @@ public class MyController {
     public String contains(@RequestParam char charcater, int amount) throws IOException {
         CatService catService = new CatService();
         CatFact a = catService.getCatFact();
-        int occurance = StringUtils.countOccurrencesOf(a.getText(), String.valueOf(charcater));
+        int occurrence = StringUtils.countOccurrencesOf(a.getText(), String.valueOf(charcater));
 
-        if (occurance >= amount) {
+        if (occurrence >= amount) {
             return a.getText();
         } else {
             return "Sorry no luck";
