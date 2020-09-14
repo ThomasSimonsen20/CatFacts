@@ -18,7 +18,7 @@ public class MyController {
     @GetMapping("/")
     @ResponseBody
     public String welcome() {
-        return "Here we can get catfacts if we're lucky and the application works #NeverLucky";
+        return "IF THIS TEXT APPEAR THE APPLICATION WORK WOOHOOO";
     }
 
     @GetMapping("/getsingle")
